@@ -16,8 +16,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                bat 'cd NumberGenerator'
-                bat 'mvn install'
+                    bat 'cd NumberGenerator & mvn install'
             }
            
             }
