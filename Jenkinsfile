@@ -16,11 +16,12 @@ pipeline {
 
         stage ('Build') {
             steps {
-                bat 'mvn -Dmaven.test.failure.ignore=true install'
+                bat 'cd NumberGenerator'
+                bat 'mvn install'
             }
             post {
                 success {
-                    junit 'target\surefire-reports\**\*.xml'
+                    junit 'NumberGenerator\target\surefire-reports\**\*.xml'
                 }
             }
         }
