@@ -1,5 +1,7 @@
 pipeline {
-    agent {remote_windows1_machine_agent}
+    agent {
+        label "windows"
+    }
     tools {
         maven 'Maven3.1.1'
         jdk 'java8'
