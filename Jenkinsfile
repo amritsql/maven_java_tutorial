@@ -22,7 +22,7 @@ pipeline {
             }
              post {
                 success {
-                    junit 'target/surefire-reports/TEST-com.mkyong.AppTest.xml'
+                    junit 'NumberGenerator/target/surefire-reports/*.xml'
                         }
                  }
                
